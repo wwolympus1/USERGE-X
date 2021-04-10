@@ -194,7 +194,7 @@ Press the "Commands" button to view the full list of the commands of the bot!
             )
             btns = [
                 [
-                    InlineKeyboardButton("Commands (for Groups)", url=https://telegra.ph/Commands-for-Cy-Music-Bot-04-10),
+                    InlineKeyboardButton("Commands for Groups", url=https://telegra.ph/Commands-for-Cy-Music-Bot-04-10),
                 ]
             ]
         try:
