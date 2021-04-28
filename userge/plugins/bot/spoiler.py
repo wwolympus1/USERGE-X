@@ -70,7 +70,7 @@ async def spoiler_alert_(message: Message):
     bot_name = (await userge.bot.get_me()).username
     link = f"https://t.me/{bot_name}?start={rnd_id}"
     buttons = None
-    text_ = "<b>{} Shared A Spoiler</b> !\n[<b>Click To View</b>]({})".format(
+    text_ = "<b>{} shared a chika.</b> !\n[<b>Click to view.</b>]({})".format(
         mention_html(message.from_user.id, message.from_user.first_name), link
     )
     if message.client.is_bot:
@@ -91,7 +91,7 @@ async def spoiler_alert_(message: Message):
                 ],
             ]
         )
-        text_ = "<b><u>Choose How You Want to Share the Spoiler.</b></u>"
+        text_ = "<b><u>Choose how You Want to Share the Spoiler.</b></u>"
     await message.edit(text_, reply_markup=buttons, disable_web_page_preview=True)
 
 
@@ -125,7 +125,7 @@ if userge.has_bot:
                         allow_random=False,
                     )
                 else:
-                    await message.reply("Sorry 🥺 , The Spoiler has now been expired !")
+                    await message.reply("`Huli ka na sa chika. Sad.`")
             except UserIsBlocked:
                 pass
         if u_user.id not in Config.OWNER_ID and u_user.id not in Config.SUDO_USERS:
@@ -152,7 +152,7 @@ if userge.has_bot:
         ]
         try:
             await c_q.edit_message_text(
-                "<b>Click To View The Spoiler !</b>",
+                "<b>Click to view the message.</b>",
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         except MessageNotModified:
