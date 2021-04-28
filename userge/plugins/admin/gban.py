@@ -130,9 +130,9 @@ async def gban_user(message: Message):
         )
         return
     await message.edit(
-        r"\\**#GBanned_User**//"
+        r" 》 **GBanned User** 《"
         f"\n\n**First Name:** {mention_html(user_id, firstname)}\n"
-        f"**User ID:** `{user_id}`\n**Reason:** `{reason}`"
+        f"**User ID:** `{user_id}`\n**Reason:** {reason}"
     )
     # TODO: can we add something like "GBanned by {any_sudo_user_fname}"
     if message.client.is_bot:
