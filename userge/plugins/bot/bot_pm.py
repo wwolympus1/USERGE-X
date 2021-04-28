@@ -188,7 +188,7 @@ Press the » 🎛 Commands button to view the full list of the commands of the b
 <i>Created by</i> [Cy](https://t.me/ryscuu25)
 """
             if Config.BOT_FORWARDS:
-                start_msg += "<b>\n📌 NOTE:</b>\nYou can 📨 <b>Send Message</b> here to contact my <b>Master.</b>"
+                start_msg += "<b>\n📌 NOTE:</b>\nYou can 📨 <b>Send Message</b> here to contact bot owner.</b>"
             contact_url = (
                 f"https://t.me/{owner_.uname}"
                 if owner_.uname
@@ -196,7 +196,7 @@ Press the » 🎛 Commands button to view the full list of the commands of the b
             )
             btns = [
                 [
-                    InlineKeyboardButton("👤  OWNER", url="https://t.me/ryscuu25"),
+                    InlineKeyboardButton("👤  OWNER", url="https://t.me/ryscuu255"),
                     InlineKeyboardButton("⭐️  COMMANDS", url="https://telegra.ph/Commands-for-Cy-Music-Bot-04-10"),
                 ]
             ]
