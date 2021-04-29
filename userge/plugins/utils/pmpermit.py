@@ -285,8 +285,9 @@ async def uninvitedPmHandler(message: Message):
         else:
             pmCounter[message.from_user.id] += 1
             await message.reply(
-                f"❎ **Hindi po ako nagrereply here.** Pwede niyo po akong i-message sa [link](https://t.me/ryscuu25) na ito. Salamat."
-                del_in=5,
+                f"❎ Hindi po ako nagrereply here. Kung may tanong po kayo, pwede niyo po akong i-message sa [link](https://t.me/ryscuu25) na ito."
+                "Salamat! 😉",
+                del_in=30,
             )
     else:
         pmCounter.update({message.from_user.id: 1})
