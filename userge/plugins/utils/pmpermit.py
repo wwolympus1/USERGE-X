@@ -270,7 +270,7 @@ async def uninvitedPmHandler(message: Message):
     if message.from_user.is_verified:
         return
     if message.from_user.id in pmCounter:
-        if pmCounter[message.from_user.id] > 3:
+        if pmCounter[message.from_user.id] > 100:
             del pmCounter[message.from_user.id]
             # await message.reply(blocked_message)
             report_img_ = await reported_user_image(message.from_user.first_name)
