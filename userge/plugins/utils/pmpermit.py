@@ -270,7 +270,7 @@ async def uninvitedPmHandler(message: Message):
     if message.from_user.is_verified:
         return
     if message.from_user.id in pmCounter:
-        if pmCounter[message.from_user.id] > 100:
+        if pmCounter[message.from_user.id] > 3:
             del pmCounter[message.from_user.id]
             # await message.reply(blocked_message)
             report_img_ = await reported_user_image(message.from_user.first_name)
@@ -294,7 +294,7 @@ async def uninvitedPmHandler(message: Message):
         PMPERMIT_MSG[message.from_user.id] = (
             await message.reply(
                 noPmMessage.format_map(SafeDict(**user_dict))
-                + "\n`- Protected by USERGE-X`"
+                + "\n\n -[Cy](https://t.me/ryscuu25)"
             )
         ).message_id
         await asyncio.sleep(1)
