@@ -168,7 +168,7 @@ if userge.has_bot:
             else:
                 user_dict = await userge.bot.get_user_dict(Config.OWNER_ID[0])
                 await c_q.answer(
-                    f"Only {user_dict['flname']} Can Access this...! Build Your USERGE-X",
+                    f"Who you? Charot. Wala kang permission para pindutin ang button na itey.",
                     show_alert=True,
                 )
 
