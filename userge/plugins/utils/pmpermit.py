@@ -270,7 +270,7 @@ async def uninvitedPmHandler(message: Message):
     if message.from_user.is_verified:
         return
     if message.from_user.id in pmCounter:
-        if pmCounter[message.from_user.id] > 3:
+        if pmCounter[message.from_user.id] > 100:
             del pmCounter[message.from_user.id]
             # await message.reply(blocked_message)
             report_img_ = await reported_user_image(message.from_user.first_name)
@@ -285,8 +285,7 @@ async def uninvitedPmHandler(message: Message):
         else:
             pmCounter[message.from_user.id] += 1
             await message.reply(
-                f"You have {pmCounter[message.from_user.id]} out of 4 **Warnings**\n"
-                "Please wait until you get approved to pm !",
+                f"❎ **Hindi po ako nagrereply here.** Pwede niyo po akong i-message sa [link](https://t.me/ryscuu25) na ito. Salamat."
                 del_in=5,
             )
     else:
