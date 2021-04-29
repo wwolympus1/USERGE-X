@@ -24,9 +24,8 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "Hello {fname} this is an automated message\n"
-    "Please wait until you get approved to direct message "
-    "And please dont spam until then "
+    "__Hello {fname} this is an automated message.__\n"
+    "Kung nandito ka para mag-tanong regarding sa bot. I-message niyo po si [Cy](https://t.me/ryscuu25). Salamat 😉"
 )
 blocked_message = bk_blocked_message = "**You were automatically blocked**"
 
@@ -47,7 +46,7 @@ async def _init() -> None:
 
 
 @userge.on_cmd(
-    "allow",
+    "a",
     about={
         "header": "allows someone to contact",
         "description": "Ones someone is allowed, "
@@ -72,7 +71,7 @@ async def allow(message: Message):
             await message.edit("`Already approved to direct message`", del_in=3)
         else:
             await (await userge.get_users(userid)).unblock()
-            await message.edit("`Approved to direct message`", del_in=3)
+            await message.edit("✅", del_in=1)
 
         if userid in PMPERMIT_MSG:
             await userge.delete_messages(userid, message_ids=PMPERMIT_MSG[userid])
