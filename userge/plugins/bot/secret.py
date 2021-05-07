@@ -77,7 +77,7 @@ if userge.has_bot:
             buttons = InlineKeyboardMarkup(
                 [[InlineKeyboardButton("🔐  SHOW", callback_data=msg_b_data)]]
             )
-            msg_body += f"\n\n👁 **Views:** {v_count + 1}"
+            msg_body += f"\n\n ☑ <b>Seen</b>"
             try:
                 await c_q.edit_message_text(
                     text=msg_body, disable_web_page_preview=True, reply_markup=buttons
