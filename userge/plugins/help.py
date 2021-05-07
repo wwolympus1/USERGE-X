@@ -57,22 +57,19 @@ _CATEGORY = {
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
-    title="Repo",
-    input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
-    url="https://github.com/code-rgb/USERGE-X",
-    description="Setup Your Own",
+    title="Cy Music Bot",
+    input_message_content=InputTextMessageContent("**Follow Cy's TG Channels.** "),
+    url="https://t.me/cmbupdates",
+    description="Please follow. TY.",
     thumb_url="https://i.imgur.com/1xsOo9o.png",
     reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "🔥 USERGE-X Repo", url="https://github.com/code-rgb/USERGE-X"
+                    "🔥 Bot Updates", url="https://t.me/cmbupdates"
                 ),
                 InlineKeyboardButton(
-                    "🚀 Deploy USERGE-X",
-                    url=(
-                        "https://heroku.com/deploy?template="
-                        "https://github.com/code-pms/MyGpack"
+                    "🔴 Personal Channel", url="https://t.me/ryscuu25"
                     ),
                 ),
             ]
