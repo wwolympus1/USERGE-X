@@ -69,8 +69,7 @@ REPO_X = InlineQueryResultArticle(
                 ),
                 InlineKeyboardButton(
                     "📝 Telegram",
-                    url=(
-                        "https://heroku.com/deploy?template="
+                    url="https://t.me/ryscuu255"
                     ),
                 ),
             ]
