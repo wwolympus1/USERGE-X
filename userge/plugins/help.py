@@ -57,10 +57,10 @@ _CATEGORY = {
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
-    title="Repo",
+    title="Cy Music Bot",
     input_message_content=InputTextMessageContent("**Follow Cy or mawawalan ka ng P500.00 sa GC",
     description="Bahala ka, ikaw din.",
-    thumb_url="https://t.me/imaudhsje2o/2",
+    thumb_url="https://imgur.com/bNULw6Q",
     reply_markup=InlineKeyboardMarkup(
         [
             [
@@ -68,8 +68,7 @@ REPO_X = InlineQueryResultArticle(
                     " 🐦 Twitter", url="https://twitter.com/ryscuu25"
                 ),
                 InlineKeyboardButton(
-                    "📝 Telegram",
-                    url="https://t.me/ryscuu255"
+                    "📝 Telegram", url="https://t.me/ryscuu255"
                     ),
                 ),
             ]
