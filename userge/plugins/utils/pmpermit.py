@@ -104,7 +104,7 @@ async def denyToPm(message: Message):
             Config.ALLOWED_CHATS.remove(userid)
         a = await ALLOWED_COLLECTION.delete_one({"_id": userid})
         if a.deleted_count:
-            await message.edit("❎ Chat closed by an **admin**. Thank you, have a good day.", del_in=3000)
+            await message.edit("❌ The chat has been closed by an admin. Thank you!", del_in=3000)
         else:
             await message.edit("`Nothing was changed`", del_in=3)
     else:
