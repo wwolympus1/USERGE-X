@@ -24,8 +24,8 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "__Hello {fname} this is an automated message.__\n"
-    "Kung nandito ka para mag-tanong regarding sa bot. I-message niyo po si [Cy](https://t.me/ryscuu25). Salamat 😉"
+    "👋 Hello.\nWelcome to the official support of Werewolf Olympus.\n"
+    "Using /chat you will directly open the chat with an admin."
 )
 blocked_message = bk_blocked_message = "**You were automatically blocked**"
 
@@ -46,7 +46,7 @@ async def _init() -> None:
 
 
 @userge.on_cmd(
-    "a",
+    "accept",
     about={
         "header": "allows someone to contact",
         "description": "Ones someone is allowed, "
@@ -71,7 +71,7 @@ async def allow(message: Message):
             await message.edit("`Already approved to direct message`", del_in=3)
         else:
             await (await userge.get_users(userid)).unblock()
-            await message.edit("✅", del_in=1)
+            await message.edit("✅ An admin accepted your chat request. **Start chatting.**", del_in=3000)
 
         if userid in PMPERMIT_MSG:
             await userge.delete_messages(userid, message_ids=PMPERMIT_MSG[userid])
@@ -85,7 +85,7 @@ async def allow(message: Message):
 
 
 @userge.on_cmd(
-    "nopm",
+    "close",
     about={
         "header": "Activates guarding on inbox",
         "description": "Ones someone is allowed, "
@@ -104,7 +104,7 @@ async def denyToPm(message: Message):
             Config.ALLOWED_CHATS.remove(userid)
         a = await ALLOWED_COLLECTION.delete_one({"_id": userid})
         if a.deleted_count:
-            await message.edit("`Prohibitted to direct message`", del_in=3)
+            await message.edit("❎ Chat closed by an **admin*. Thank you, have a good day.", del_in=3000)
         else:
             await message.edit("`Nothing was changed`", del_in=3)
     else:
@@ -285,16 +285,15 @@ async def uninvitedPmHandler(message: Message):
         else:
             pmCounter[message.from_user.id] += 1
             await message.reply(
-                f"❎ Hindi po ako nagrereply here. Kung may tanong po kayo, pwede niyo po akong i-message sa [link](https://t.me/ryscuu25) na ito."
-                "Salamat! 😉",
-                del_in=30,
+                f"☑️ You have sent a request. Please wait for an admin to accept it.",
+                del_in=3000,
             )
     else:
         pmCounter.update({message.from_user.id: 1})
         PMPERMIT_MSG[message.from_user.id] = (
             await message.reply(
                 noPmMessage.format_map(SafeDict(**user_dict))
-                + "\n\n -[Cy](https://t.me/ryscuu25)"
+                + "\n\n-[Werewolf Olympus](t.me/werewolfolympus)"
             )
         ).message_id
         await asyncio.sleep(1)
