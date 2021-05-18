@@ -186,7 +186,7 @@ Welcome to the official support of Werewolf Olympus.
 <i>Created by</i> [Cy](https://t.me/ryscuu25)
 """
             if Config.BOT_FORWARDS:
-                start_msg += "<b>\n📌 NOTE:</b>\nYou can 📨 <b>send message</b> here to contact admins of Werewolf Olympus.</b>"
+                start_msg += "\nYou can 📨 <b>send message</b> here to contact admins of Werewolf Olympus.</b>"
             contact_url = (
                 f"https://t.me/{owner_.uname}"
                 if owner_.uname
