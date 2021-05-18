@@ -71,7 +71,7 @@ async def allow(message: Message):
             await message.edit("`Already approved to direct message`", del_in=3)
         else:
             await (await userge.get_users(userid)).unblock()
-            await message.edit("✅ An admin accepted your chat request. **Start chatting.**", del_in=3000)
+            await message.edit("✅ An admin accepted your chat request. **Start your conversation.**", del_in=3000)
 
         if userid in PMPERMIT_MSG:
             await userge.delete_messages(userid, message_ids=PMPERMIT_MSG[userid])
@@ -293,7 +293,7 @@ async def uninvitedPmHandler(message: Message):
         PMPERMIT_MSG[message.from_user.id] = (
             await message.reply(
                 noPmMessage.format_map(SafeDict(**user_dict))
-                + "\n\n-[Werewolf Olympus](t.me/werewolfolympus)"
+                + "\n- Bot by Werewolf Olympus"
             )
         ).message_id
         await asyncio.sleep(1)
