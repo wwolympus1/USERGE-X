@@ -26,7 +26,7 @@ async def _init() -> None:
 
 
 @userge.on_cmd(
-    "setwelcome",
+    "swelcome",
     about={
         "header": "Creates a welcome message in current chat",
         "options": {
@@ -67,7 +67,7 @@ async def setwel(msg: Message):
 
 
 @userge.on_cmd(
-    "setleft",
+    "sleft",
     about={
         "header": "Creates a left message in current chat",
         "options": {
@@ -106,7 +106,7 @@ async def setleft(msg: Message):
 
 
 @userge.on_cmd(
-    "nowelcome",
+    "xwelcome",
     about={
         "header": "Disables welcome message in the current chat",
         "flags": {"-all": "disable all welcome messages"},
@@ -121,7 +121,7 @@ async def nowel(msg: Message):
 
 
 @userge.on_cmd(
-    "noleft",
+    "xleft",
     about={
         "header": "Disables left message in the current chat",
         "flags": {"-all": "disable all left messages"},
@@ -136,7 +136,7 @@ async def noleft(msg: Message):
 
 
 @userge.on_cmd(
-    "dowelcome",
+    "owelcome",
     about={
         "header": "Turns on welcome message in the current chat",
         "flags": {"-all": "enable all welcome messages"},
@@ -151,7 +151,7 @@ async def dowel(msg: Message):
 
 
 @userge.on_cmd(
-    "doleft",
+    "oleft",
     about={
         "header": "Turns on left message in the current chat :)",
         "flags": {"-all": "enable all left messages"},
@@ -166,7 +166,7 @@ async def doleft(msg: Message):
 
 
 @userge.on_cmd(
-    "delwelcome",
+    "dwelcome",
     about={
         "header": "Delete welcome message in the current chat :)",
         "flags": {"-all": "delete all welcome messages"},
