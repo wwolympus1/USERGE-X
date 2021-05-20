@@ -315,7 +315,7 @@ async def ban_function(message: Message, warned_user: User, warn_mode: str):
 
 
 @userge.on_cmd(
-    "(?:resetwarns|delwarns)",
+    "(?:resetwarns|rmprewarns)",
     about={
         "header": "reset warns",
         "description": "This command is used to delete all the warns user got so far in the chat",
@@ -352,7 +352,7 @@ async def resetwarns(message: Message):
 
 
 @userge.on_cmd(
-    "warns",
+    "prewarns",
     about={
         "header": "check warns of a user",
         "description": "Use this command to know number of warns a user got so far in the chat",
