@@ -49,7 +49,7 @@ banned_text = "Warnings has been exceeded! {} has been {}!"
 
 
 @userge.on_cmd(
-    "warn",
+    "prewarn",
     about={
         "header": "warn a user",
         "description": "Use this command to warn the user! you can mention or reply to the offended user and add reason if needed",
@@ -102,7 +102,7 @@ async def warn_func(message: Message):
             warn_mode_text = "banned"
 
         banned_log = (
-            r"\\**#Warn_Action**//"
+            r"#PreWarn"
             + "\n"
             + banned_text.format(warned_user.mention, warn_mode_text)
         )
@@ -115,14 +115,14 @@ async def warn_func(message: Message):
             {"user_id": warned_user.id, "chat_id": message.chat.id}
         )
 
-        warn_action = r"\\**#Warn_Action_Log**//"
+        warn_action = r"\\**#Prewarn_Action_Log**//"
         warn_action += f"\n{banned_log}"
         await CHANNEL.log(warn_action)
         return
-    warn_text = r"\\**#Warned_User**//"
+    warn_text = r"**Prewarned User**"
     warn_text += f"""
-{by_user.mention} has warned {warned_user.mention} in <b>{chat_title}</b>
-Reason: <code>{reason}</code>
+{by_user.mention} has prewarned {warned_user.mention} in <b>{chat_title}</b>
+Reason: {reason}
 Warns: {wcount}/{max_warns}
 """
     warn_id = str(
