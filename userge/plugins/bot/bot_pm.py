@@ -194,10 +194,7 @@ Welcome to the official support of Werewolf Olympus.
             )
             btns = [
                 [
-                    InlineKeyboardButton("👮‍♀️  GROUP OWNER", url="https://t.me/AL4TUS"),
-                ]
-                [
-                    InlineKeyboardButton("ℹ  FOLLOW", url="https://t.me/olympuschannel"),
+                    [InlineKeyboardButton("ℹ  FOLLOW", url="https://t.me/olympuschannel")],
                 ]
             ]
         try:
