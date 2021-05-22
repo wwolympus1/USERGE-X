@@ -203,7 +203,7 @@ if userge.has_bot:
                     await BOT_START.find_one_and_delete({"user_id": b_id})
                 else:
                     await userge.bot.send_message(
-                        b_id, "🔊 You received a **new** Broadcast."
+                        b_id, "🔊 You received a **new** message."
                     )
                     if to_copy:
                         await replied.copy(b_id)
