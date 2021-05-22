@@ -194,7 +194,9 @@ Welcome to the official support of Werewolf Olympus.
             )
             btns = [
                 [
-                    InlineKeyboardButton("👮‍♀️  OWNER", url="https://t.me/AL4TUS"),
+                    InlineKeyboardButton("👮‍♀️  GROUP OWNER", url="https://t.me/AL4TUS"),
+                ]
+                [
                     InlineKeyboardButton("ℹ  FOLLOW", url="https://t.me/olympuschannel"),
                 ]
             ]
