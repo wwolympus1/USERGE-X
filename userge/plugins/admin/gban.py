@@ -91,7 +91,7 @@ async def spam_protect_(message: Message):
 )
 async def gban_user(message: Message):
     """ ban a user globally """
-    await message.edit("`GBanning...`")
+    await message.edit("`Gbanning. Please wait...`")
     user_id, reason = message.extract_user_and_text
     if not user_id:
         await message.edit(
@@ -393,7 +393,7 @@ async def gban_at_entry(message: Message):
             await asyncio.gather(
                 message.client.kick_chat_member(chat_id, user_id),
                 message.reply(
-                    r"\\**#𝑿_Antispam**//"
+                    r"Antispam Bot by Werewolf Olympus."
                     "\n\nGlobally Banned User Detected in this Chat.\n\n"
                     f"**User:** {mention_html(user_id, firstname)}\n"
                     f"**ID:** `{user_id}`\n**Reason:** `{gbanned['reason']}`\n\n"
@@ -430,7 +430,7 @@ async def gban_at_entry(message: Message):
                     await asyncio.gather(
                         message.client.kick_chat_member(chat_id, user_id),
                         message.reply(
-                            r"\\**#𝑿_Antispam**//"
+                            r"Antispam Bot by Werewolf Olympus."
                             "\n\nGlobally Banned User Detected in this Chat.\n\n"
                             "**$SENTRY CAS Federation Ban**\n"
                             f"**User:** {mention_html(user_id, firstname)}\n"
@@ -464,7 +464,7 @@ async def gban_at_entry(message: Message):
                     await asyncio.gather(
                         message.client.kick_chat_member(chat_id, user_id),
                         message.reply(
-                            r"\\**#𝑿_Antispam**//"
+                            r"Antispam Bot by Werewolf Olympus."
                             "\n\nGlobally Banned User Detected in this Chat.\n\n"
                             "**$Intellivoid Spam Protection**"
                             f"\n**User:** {mention_html(user_id, firstname)}\n"
@@ -491,7 +491,7 @@ async def gban_at_entry(message: Message):
                     await asyncio.gather(
                         message.client.kick_chat_member(chat_id, user_id),
                         message.reply(
-                            r"\\**#𝑿_Antispam**//"
+                            r"Antispam Bot by Werewolf Olympus."
                             "\n\nGlobally Banned User Detected in this Chat.\n\n"
                             "**$SENTRY SpamWatch Federation Ban**\n"
                             f"**User:** {mention_html(user_id, firstname)}\n"
