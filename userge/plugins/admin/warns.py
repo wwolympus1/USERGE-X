@@ -37,9 +37,9 @@ no_input_reply = (
     "I don't know who you're talking about, you're going to need to specify a user...!"
 )
 userid_not_valid = "can't get the user!"
-user_is_admin = "Sorry! I can't warn an Admin"
-owner_or_sudo = "I can't Ban My Owner and Sudo Users"
-permission_denied = "You Don't have the permission to do it !"
+user_is_admin = "Sorry! I can't warn an Admin."
+owner_or_sudo = "I can't Ban my Owner and Sudo Users"
+permission_denied = "You don't have the permission to do it."
 warn_removed = "✅ Warn Removed Successfully"
 warn_removed_caption = "✅ Warn removed by {} !"
 no_warns_msg = "Well, {} doesn't have any warns."
