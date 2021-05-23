@@ -194,7 +194,8 @@ Welcome to the official support of Werewolf Olympus.
             )
             btns = [
                 [
-                    [InlineKeyboardButton("ℹ  FOLLOW", url="https://t.me/olympuschannel")],
+                    InlineKeyboardButton("📩 CONTACT US", url=contact_url),
+                    InlineKeyboardButton("⭐️ FOLLOW", url="https://t.me/OlympusChannel"),
                 ]
             ]
         try:
