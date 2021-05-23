@@ -180,10 +180,9 @@ if userge.has_bot:
             start_msg, btns = default_owner_start(from_user)
         else:
             start_msg = f"""
-Hello 👋 {from_user.fname}.
-
-Welcome to the official support of Werewolf Olympus.
-<i>Created by</i> [Cy](https://t.me/ryscuu25)
+Hello {from_user.fname} 👋
+<b>Welcome to the official support of Werewolf Olympus.</b>
+<i>Created by</i> [Cy](https://t.me/ryscuu255)
 """
             if Config.BOT_FORWARDS:
                 start_msg += "\nYou can 📨 <b>send message</b> here to contact admins of Werewolf Olympus.</b>"
@@ -196,6 +195,7 @@ Welcome to the official support of Werewolf Olympus.
                 [
                     InlineKeyboardButton("📩 CONTACT US", url=contact_url),
                     InlineKeyboardButton("⭐️ FOLLOW", url="https://t.me/OlympusChannel"),
+                    InlineKeyboardButton("🕹 JOIN", url="https://t.me/WerewolfOlympus"),
                 ]
             ]
         try:
