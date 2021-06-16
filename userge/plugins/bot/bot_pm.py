@@ -181,8 +181,8 @@ if userge.has_bot:
         else:
             start_msg = f"""
 Hello {from_user.fname} 👋
-<b>Welcome to the official support of Werewolf Olympus.</b>
-<i>Created by</i> [Cy](https://t.me/ryscuu255)
+<b>Welcome to the official support of Paimon Market.</b>
+<i>Created by</i> [P.A.I.M.O.N.](https://t.me/paimon_robot)
 """
             if Config.BOT_FORWARDS:
                 start_msg += "\nYou can 📨 <b>send message</b> here to contact admins of Werewolf Olympus.</b>"
@@ -194,8 +194,7 @@ Hello {from_user.fname} 👋
             btns = [
                 [
                     InlineKeyboardButton("📩 CONTACT US", url=contact_url),
-                    InlineKeyboardButton("⭐️ FOLLOW", url="https://t.me/OlympusChannel"),
-                    InlineKeyboardButton("🕹 JOIN", url="https://t.me/WerewolfOlympus"),
+                    InlineKeyboardButton("✅ JOIN", url="https://t.me/PAIMONMARKET"),
                 ]
             ]
         try:
