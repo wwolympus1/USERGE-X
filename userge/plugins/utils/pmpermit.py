@@ -24,8 +24,7 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "👋 Hello.\nWelcome to the official support of Werewolf Olympus.\n"
-    "Using /chat you will directly open the chat with an admin."
+    "👋 Hello.\nDo not PM this account. To join, click the link below.\n\nhttps://t.me/paimonmarket"
 )
 blocked_message = bk_blocked_message = "**You were automatically blocked**"
 
@@ -285,7 +284,7 @@ async def uninvitedPmHandler(message: Message):
         else:
             pmCounter[message.from_user.id] += 1
             await message.reply(
-                f"☑️ You have sent a request. Please wait for an admin to accept it.",
+                f"👋 Hello.\nDo not PM this account. To join, click the link below.\n\nhttps://t.me/paimonmarket",
                 del_in=3000,
             )
     else:
